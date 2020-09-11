@@ -64,16 +64,8 @@ app.use(function (req, res, next) {
 //adding route for home page
 app.get('/', function (req, res) {
   res.send(
-    '<center><h2><b>Hi, This is DP Server.<br><i> How can i help you ;)</i></b></h2></center>'
+    '<center><h2><b>Hi, This is a Server.<br><i> How can i help you ;)</i></b></h2></center>'
   );
-});
-
-app.use(express.static(__dirname + '/public'));
-
-//Adding route for docs 
-app.get('/docs', function (req, res) {
-  app.use(express.static(__dirname + '/public/docs'));
-  res.sendFile('./public/docs/index.html', { root: __dirname });
 });
 
 //define common api and require routes based file &
@@ -96,12 +88,7 @@ process
 //html views set up
 app.use(express.static('public'));
 
-
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
-
-
-var port = process.env.PORT || 4000;
+var port = 8001;
 app.listen(port, function () {
   console.log('Listening on ' + port);
 });
