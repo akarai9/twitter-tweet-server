@@ -18,8 +18,8 @@ const dev = {
     DbMysql: {
         host: "",
         user: "",
-        password: "LkzPoeRay2A89Ti",
-        database: "nexlvdb",
+        password: "",
+        database: "",
         multipleStatements: true,
         charset : 'utf8mb4' ,
         debug   :  false,
